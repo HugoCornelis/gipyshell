@@ -18,13 +18,14 @@ Makefile.in$
 ^OLD/
 ^RPM_BUILD$
 ^_Inline
-^gipyshell-.*tar.gz$
 ^aclocal\.m4$
 ^config.guess$
 ^config.log$
 ^config.status$
 ^config.sub$
 ^configure$
+^depcomp$
+^gipyshell-.*tar.gz$
 ^html/htdocs/neurospaces_project/gipyshell
 ^install-sh$
 ^installed
