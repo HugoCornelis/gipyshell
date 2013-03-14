@@ -1,10 +1,27 @@
 -*- outline -*-
 
-* Item 1
-** subitem 1
-*** subsubitem 1
+* GUI
+** with a command line option.
+*** eg. ipython --gui=wx
+** or via startup configuration
+*** TerminalIPythonApp.gui=wx
 
-This file is in outline mode.  Outline mode is used by the emacs
-family of editors and can easily be converted to latex or html.
+** should open a control panel on startup
+*** button for exit.
+*** button for running a simulation.
+*** set simulation time.
 
+* startup
+** imports G-3 python modules
+*** SSPy
+*** GUI code
+**** default control panel
+**** graph widget
 
+** install aliasses to browse available models
+*** similar to the gshell model library browser
+
+** install a help system specific to G-3 functionality and commands
+*** integrated with Dave's tutorials
+
+** ask Dave for notebooks
