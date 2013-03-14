@@ -4,7 +4,7 @@
 %define _mandir		/usr/local/share/man/man1
 
 # $Format: "%define name	${package}"$
-%define name	${package}
+%define name	gipyshell
 
 
 # $Format: "%define release	        ${label}"$

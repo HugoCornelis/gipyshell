@@ -64,7 +64,24 @@ sub main
 {
     read_cmd_line();
 
-    # nothing here yet.
+    system "mkdir --parents $ENV{HOME}/.genesis3/gipyshell/ipython_profile";
+
+    if ($?)
+    {
+	die "$0: cannot create the necessary profile directories for correct execution of the gipyshell";
+    }
+
+    if (not -d "$ENV{HOME}/.genesis3/gipyshell/ipython_profile/genesis3")
+    {
+	system "cp -a /usr/local/neurospaces/gipyshell/ipython_profile/genesis3/ $ENV{HOME}/.genesis3/gipyshell/ipython_profile";
+
+	if ($?)
+	{
+	    die "$0: cannot create the necessary ipython profile for correct execution of the gipyshell";
+	}
+    }
+
+    system "ipython --pylab --banner --pdb --i --profile=genesis3 --ipython-dir=$ENV{HOME}/.genesis3/gipyshell/ipython_profile";
 }
 
 

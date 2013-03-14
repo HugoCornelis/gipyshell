@@ -19,7 +19,7 @@ dnl ##########################################################################
 AC_PREREQ(2.59)
 
 # $Format: "AC_INIT(${package}, ${major}.${minor}.${micro}-${label}, ${email})"$
-AC_INIT(${package}, 0.0.0-alpha, hugo.cornelis@gmail.com)
+AC_INIT(gipyshell, 0.0.0-alpha, hugo.cornelis@gmail.com)
 
 
 
@@ -77,7 +77,7 @@ dnl dnl all subdirs
 dnl AC_CONFIG_SUBDIRS()
 
 # $Format: "AM_INIT_AUTOMAKE(${package}, ${major}.${minor}.${micro}-${label})"$
-AM_INIT_AUTOMAKE(${package}, 0.0.0-alpha)
+AM_INIT_AUTOMAKE(gipyshell, 0.0.0-alpha)
 
 PERL_MODULES=`(cd perl && find . -name "*.pm" | perl -pe 's/\n/ /g')`
 AC_SUBST(PERL_MODULES)
@@ -171,6 +171,9 @@ AS_IF([test -z "$PYTHON_LDFLAGS"], [
 
 TEST_SPECIFICATION_FILES=`/bin/echo -n "tests/introduction.html " && find tests/specifications -name "*.t" | perl -pe 's/\n/ /g' && find tests/specifications/strings -name "*.txt" | perl -pe 's/\n/ /g' && find tests/data -name "*.yml" | perl -pe 's/\n/ /g'`
 AC_SUBST(TEST_SPECIFICATION_FILES)
+
+IPYTHON_PROFILE_FILES=`find ipython_profile/ -type f | perl -pe 's/\n/ /g'`
+AC_SUBST(IPYTHON_PROFILE_FILES)
 
 
 dnl This does macro substitutions for certain operating systems and 

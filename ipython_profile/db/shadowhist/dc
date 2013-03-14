@@ -1,0 +1,5 @@
+(dp1
+Vtabulate (cross (xrange (10), xrange(10)) * oneToOne)
+p2
+I18
+s.

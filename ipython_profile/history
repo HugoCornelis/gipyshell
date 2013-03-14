@@ -1,0 +1,31 @@
+q
+quit
+y
+k.npy
+execfile "k.npy"
+nmc.query("export no ndf STDOUT /**")
+quit
+exit
+?
+n
+quit()
+y
+exit()
+y
+from csa import *
+show (oneToOne, 100, 100)
+show (full - oneToOne)
+show ([(22, 7 ), (8, 23)])
+show (cross (xrange (10), xrange (20)))
+show (cross (xrange (10), xrange(10)) * oneToOne)
+tabulate (cross (xrange (10), xrange(10)) * oneToOne)
+show (cross (xrange (10), xrange(10)) * oneToOne)
+for x in cross (xrange (10), xrange (10)) * oneToOne:
+    print x
+show (random (0.5))
+show (block (5,3) * random (0.5))
+show (block (10) * random (0.7))
+show (block (10) * random (0.7) * random (0.5) - oneToOne)
+g = random2d (900)
+gplot2d (g, 900)
+import cmath

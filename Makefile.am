@@ -18,11 +18,16 @@ SUBDIRS = # src # perl python
 
 # fill in the scripts that should go with the distribution:
 dist_bin_SCRIPTS = \
+	bin/gipyshell \
 	bin/gipyshell-sync \
 	bin/gipyshell-version
 
 @PACKAGE@testdir=$(prefix)/neurospaces/$(PACKAGE)
 nobase_dist_@PACKAGE@test_DATA=@TEST_SPECIFICATION_FILES@
+
+@PACKAGE@profiledir=$(prefix)/neurospaces/$(PACKAGE)
+nobase_dist_@PACKAGE@profile_DATA=@IPYTHON_PROFILE_FILES@
+
 
 RELEASE_MAJOR=`release-extract --major`
 RELEASE_MINOR=`release-extract --minor`
