@@ -20,7 +20,9 @@ c.InteractiveShellApp.ignore_old_config=True
 # c.InteractiveShellApp.code_to_run = ''
 
 # lines of code to run at IPython startup.
-# c.InteractiveShellApp.exec_lines = []
+# c.InteractiveShellApp.exec_lines = [ 'import sspy', 'import heccer', 'import model_container', ]
+
+# c.InteractiveShellApp.log_level = 10
 
 # If true, an 'import *' is done from numpy and pylab, when using pylab
 # c.InteractiveShellApp.pylab_import_all = True
@@ -45,16 +47,21 @@ c.InteractiveShellApp.ignore_old_config=True
 # Application, InteractiveShellApp
 
 # Execute the given command string.
-# c.TerminalIPythonApp.code_to_run = ''
+# c.TerminalIPythonApp.code_to_run = 'g3 = sspy.SSPy(verbose=True)'
 
 # The IPython profile to use.
 # c.TerminalIPythonApp.profile = u'default'
 
 # Set the log level by value or name.
-# c.TerminalIPythonApp.log_level = 30
+c.TerminalIPythonApp.log_level = 10
 
 # lines of code to run at IPython startup.
-# c.TerminalIPythonApp.exec_lines = []
+c.TerminalIPythonApp.exec_lines = [
+    'import sspy',
+    'import heccer',
+    'import model_container',
+    'g3 = sspy.SSPy(verbose=True)',
+    ]
 
 # Enable GUI event loop integration ('qt', 'wx', 'gtk', 'glut', 'pyglet').
 # c.TerminalIPythonApp.gui = None

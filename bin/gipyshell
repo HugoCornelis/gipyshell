@@ -71,9 +71,9 @@ sub main
 	die "$0: cannot create the necessary profile directories for correct execution of the gipyshell";
     }
 
-    if (not -d "$ENV{HOME}/.genesis3/gipyshell/ipython_profile/genesis3")
+#     if (not -d "$ENV{HOME}/.genesis3/gipyshell/ipython_profile/profile_genesis3")
     {
-	system "cp -a /usr/local/neurospaces/gipyshell/ipython_profile/genesis3/ $ENV{HOME}/.genesis3/gipyshell/ipython_profile";
+	system "cp -a /usr/local/neurospaces/gipyshell/ipython_profile/profile_genesis3/ $ENV{HOME}/.genesis3/gipyshell/ipython_profile";
 
 	if ($?)
 	{
@@ -81,7 +81,9 @@ sub main
 	}
     }
 
-    system "ipython --pylab --banner --pdb --i --profile=genesis3 --ipython-dir=$ENV{HOME}/.genesis3/gipyshell/ipython_profile";
+    $ENV{NEUROSPACES_NMC_MODELS} = "/usr/local/neurospaces/models/library";
+
+    system "ipython --pylab --banner --pdb --i --profile=genesis3 --ipython-dir=$ENV{HOME}/.genesis3/gipyshell/ipython_profile " . (join ' ', map { "'$_'" } @ARGV);;
 }
 
 
