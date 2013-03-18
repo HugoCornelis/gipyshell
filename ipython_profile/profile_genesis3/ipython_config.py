@@ -61,6 +61,7 @@ c.TerminalIPythonApp.exec_lines = [
     'import heccer',
     'import model_container',
     'g3 = sspy.SSPy(verbose=True)',
+    'models = g3.CreateService(name="model", type="model_container", verbose=True)',
     ]
 
 # Enable GUI event loop integration ('qt', 'wx', 'gtk', 'glut', 'pyglet').

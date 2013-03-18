@@ -1,16 +1,12 @@
 #! /usr/bin/env gipyshell
 """
-A script that runs a model with a single passive compartment.
+A script that injects a current into a model with a single passive compartment.
 """
 
 ##########
 # user work-flow step 1: create model
 
-m = g3.CreateService(name="model",
-                     type="model_container",
-                     verbose=True)
-
-m.Load('tests/cells/singlep.ndf')
+models.Load('tests/cells/singlep.ndf')
 
 ##########
 # user work-flow step 2: create experiment, (a) input
