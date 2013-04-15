@@ -37,10 +37,14 @@ my $test
 						       },
 						       {
 							description => "Does the simulation complete?",
-							write => "$model_name.py: simulation completed",
+							read => "$model_name.py: simulation completed",
 						       },
 						       {
-							comment => "These tests generate spurious characters in the output, maybe due to the presence of multiple I/O buffers for the same output stream.  I suspect readline, although not sure.  The 'Initiated' heccer output is not tested for as a work around.",
+							description => "Can we quit the gipyshell?",
+							write => "exit",
+						       },
+						       {
+							comment => "Note that when this test does not wait for two second, it may fail",
 							description => "Can we run the $model_name model ?",
 							disabled => ($model_name eq 'tensizesp' ? 'the tensizesp model needs improvements of the numerical_compare heuristic' : 0),
 							numerical_compare => 1,
@@ -48,7 +52,7 @@ my $test
 								 application_output_file => "/tmp/output",
 								 expected_output_file => "$::config->{core_directory}/tests/specifications/strings/$model_name.txt",
 								},
-# 							wait => 20,
+							wait => 2,
 						       },
 						      ],
 				     description => "passive $model_name test",
