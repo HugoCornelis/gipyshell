@@ -64,6 +64,7 @@ my $test
 						  {
 						   description => "print sys.argv[0] + \": simulation completed\"",
 						   write => "print sys.argv[0] + \": simulation completed\"",
+						   wait => 2,
 						  },
 						  {
 						   description => "Can we quit the gipyshell?",
