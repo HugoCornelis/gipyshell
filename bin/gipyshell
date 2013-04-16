@@ -93,7 +93,7 @@ sub main
     }
     else
     {
-	system "ipython -pylab -banner -pdb -i -profile genesis3 -ipythondir $ENV{HOME}/.genesis3/gipyshell/ipython_profile -c 'import sspy; import heccer; import model_container; g3 = sspy.SSPy(verbose=True); models = g3.CreateService(name=\"model\", type=\"model_container\", verbose=True)'" . (join ' ', map { "'$_'" } @ARGV);;
+	system "ipython -pylab -banner -pdb -i -profile genesis3 -ipythondir $ENV{HOME}/.genesis3/gipyshell/ipython_profile -c 'import sspy; import heccer; import model_container; g3 = sspy.SSPy(verbose=True); models = g3.CreateService(name=\"model\", type=\"model_container\", verbose=True)' " . (join ' ', map { "'$_'" } @ARGV);;
     }
 }
 
