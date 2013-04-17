@@ -32,16 +32,20 @@ my $test
 				     command_tests => [
 						       {
 							description => "Is startup successful ?",
+							disabled => "this test only works with ipython 0.12 onwards",
 							read => "tests/scripts/$model_name.py",
 							timeout => 5,
 						       },
 						       {
 							description => "Does the simulation complete?",
 							read => "simulation completed",
+							wait => 2,
 						       },
 						       {
 							description => "Can we quit the gipyshell?",
-							write => "exit",
+							wait => 2,
+							write => "exit()
+",
 						       },
 						       {
 							comment => "Note that when this test does not wait for two second, it may fail",

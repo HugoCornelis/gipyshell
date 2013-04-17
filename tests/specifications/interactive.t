@@ -20,67 +20,80 @@ my $test
 						  {
 						   description => "models.Load('tests/cells/singlep.ndf')",
 						   wait => 1,
-						   write => "models.Load('tests/cells/singlep.ndf')",
+						   write => "models.Load('tests/cells/singlep.ndf')
+",
 						  },
 						  {
 						   description => "i = g3.CreateInput('perfect clamp', 'perfectclamp', verbose=True)",
 						   wait => 1,
-						   write => "i = g3.CreateInput('perfect clamp', 'perfectclamp', verbose=True)",
+						   write => "i = g3.CreateInput('perfect clamp', 'perfectclamp', verbose=True)
+",
 						  },
 						  {
 						   description => "i.AddInput('/singlep/segments/soma', 'INJECT')",
 						   wait => 1,
-						   write => "i.AddInput('/singlep/segments/soma', 'INJECT')",
+						   write => "i.AddInput('/singlep/segments/soma', 'INJECT')
+",
 						  },
 						  {
 						   description => "i.SetCommandVoltage(1e-9)",
 						   wait => 1,
-						   write => "i.SetCommandVoltage(1e-9)",
+						   write => "i.SetCommandVoltage(1e-9)
+",
 						  },
 						  {
 						   description => "o = g3.CreateOutput('output', 'double_2_ascii')",
 						   wait => 1,
-						   write => "o = g3.CreateOutput('output', 'double_2_ascii')",
+						   write => "o = g3.CreateOutput('output', 'double_2_ascii')
+",
 						  },
 						  {
 						   description => "o.SetFilename('/tmp/output')",
 						   wait => 1,
-						   write => "o.SetFilename('/tmp/output')",
+						   write => "o.SetFilename('/tmp/output')
+",
 						  },
 						  {
 						   description => "o.AddOutput('/singlep/segments/soma', 'Vm')",
 						   wait => 1,
-						   write => "o.AddOutput('/singlep/segments/soma', 'Vm')",
+						   write => "o.AddOutput('/singlep/segments/soma', 'Vm')
+",
 						  },
 						  {
 						   description => "h = g3.CreateSolver('solver', 'heccer', verbose=True)",
 						   wait => 1,
-						   write => "h = g3.CreateSolver('solver', 'heccer', verbose=True)",
+						   write => "h = g3.CreateSolver('solver', 'heccer', verbose=True)
+",
 						  },
 						  {
 						   description => "h.SetModelName('/singlep')",
 						   wait => 1,
-						   write => "h.SetModelName('/singlep')",
+						   write => "h.SetModelName('/singlep')
+",
 						  },
 						  {
 						   description => "h.SetTimeStep(1e-05)",
 						   wait => 1,
-						   write => "h.SetTimeStep(1e-05)",
+						   write => "h.SetTimeStep(1e-05)
+",
 						  },
 						  {
 						   description => "g3.Run(steps=100)",
 						   wait => 1,
-						   write => "g3.Run(steps=100)",
+						   write => "g3.Run(steps=100)
+",
 						  },
 						  {
 						   description => "print \"simulation completed\"",
 						   wait => 1,
-						   write => "print \"simulation completed\"",
+						   write => "print \"simulation completed\"
+",
 						  },
 						  {
 						   description => "Can we quit the gipyshell?",
 						   wait => 1,
-						   write => "exit",
+						   write => "exit()
+",
 						  },
 						  {
 						   comment => "Note that when this test does not wait for two second, it may fail",
