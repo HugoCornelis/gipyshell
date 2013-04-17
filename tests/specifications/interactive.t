@@ -14,7 +14,7 @@ my $test
 				command_tests => [
 						  {
 						   description => "Is startup successful ?",
-						   read => "In ",
+						   read => "Welcome to the gipyshell",
 						   timeout => 5,
 						  },
 						  {
