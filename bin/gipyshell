@@ -75,7 +75,7 @@ sub main
 
 #     if (not -d "$ENV{HOME}/.genesis3/gipyshell/ipython_profile/profile_genesis3")
     {
-	system "cp -a /usr/local/neurospaces/gipyshell/ipython_profile/ipythonrc-genesis3 /usr/local/neurospaces/gipyshell/ipython_profile/profile_genesis3/ $ENV{HOME}/.genesis3/gipyshell/ipython_profile";
+	system "cp -a /usr/local/neurospaces/gipyshell/ipython_profile/ipy_user_conf.py /usr/local/neurospaces/gipyshell/ipython_profile/ipythonrc-genesis3 /usr/local/neurospaces/gipyshell/ipython_profile/profile_genesis3/ $ENV{HOME}/.genesis3/gipyshell/ipython_profile";
 
 	if ($?)
 	{
