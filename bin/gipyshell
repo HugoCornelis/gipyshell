@@ -66,7 +66,7 @@ sub main
 
     # copy G-3 configuration files to the user's home directory because then we can ...
 
-    system "mkdir --parents $ENV{HOME}/.genesis3/gipyshell/ipython_profile";
+    system "mkdir --parents $ENV{HOME}/.genesis3/gipyshell/ipython_profile/profile_genesis3";
 
     if ($?)
     {
