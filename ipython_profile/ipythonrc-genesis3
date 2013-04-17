@@ -1,0 +1,3 @@
+import_mod sspy heccer model_container
+execute g3 = sspy.SSPy(verbose=True)
+execute models = g3.CreateService(name="model", type="model_container", verbose=True)
