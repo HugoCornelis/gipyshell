@@ -95,6 +95,7 @@ my $test
 						  },
 						 ],
 				description => "interactive test",
+				disabled => "interactive regression tests seem not to work with ipython 0.11 and earlier",
 				side_effects => "creates a model in the model container",
 			       },
 			      ],
