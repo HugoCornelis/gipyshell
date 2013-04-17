@@ -41,6 +41,9 @@ g3.Run(steps=100)
 
 # g3.Run(steps=10, finish=True)
 
-print sys.argv[0] + ": simulation completed"
+##########
+# user work-flow step 4: collect output
+
+print "*** simulation completed"
 
 

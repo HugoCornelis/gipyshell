@@ -37,7 +37,7 @@ my $test
 						       },
 						       {
 							description => "Does the simulation complete?",
-							read => "$model_name.py: simulation completed",
+							read => "simulation completed",
 						       },
 						       {
 							description => "Can we quit the gipyshell?",

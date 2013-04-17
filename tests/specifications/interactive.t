@@ -73,9 +73,9 @@ my $test
 						   write => "g3.Run(steps=100)",
 						  },
 						  {
-						   description => "print sys.argv[0] + \": simulation completed\"",
+						   description => "print \"simulation completed\"",
 						   wait => 1,
-						   write => "print sys.argv[0] + \": simulation completed\"",
+						   write => "print \"simulation completed\"",
 						  },
 						  {
 						   description => "Can we quit the gipyshell?",
@@ -95,11 +95,11 @@ my $test
 						  },
 						 ],
 				description => "interactive test",
-				disabled => "interactive regression tests seem not to work with ipython 0.11 and earlier",
 				side_effects => "creates a model in the model container",
 			       },
 			      ],
        description => "interactive simulation of passive models (with current injection)",
+#        disabled => "interactive regression tests seem not to work with ipython 0.11 and earlier",
        name => 'interactive.t',
       };
 
