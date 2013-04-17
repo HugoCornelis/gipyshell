@@ -34,7 +34,7 @@ my $test
 							description => "Is startup successful ?",
 							disabled => "this test only works with ipython 0.12 onwards",
 							read => "Welcome to the gipyshell",
-							timeout => 5,
+							timeout => 10,
 						       },
 						       {
 							description => "Does the simulation complete?",

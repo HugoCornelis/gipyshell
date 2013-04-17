@@ -15,7 +15,7 @@ my $test
 						  {
 						   description => "Is startup successful ?",
 						   read => "Welcome to the gipyshell",
-						   timeout => 5,
+						   timeout => 10,
 						  },
 						  {
 						   description => "models.Load('tests/cells/singlep.ndf')",
