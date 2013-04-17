@@ -62,8 +62,8 @@ my $test
 			       }
 			       @$passive_models,
 			      ],
-#        description => "simulations of passive models (with current injection)",
-       disabled => "this test only works from ipython 0.12 onwards.",
+       description => "simulations of passive models (with current injection)",
+#        disabled => "this test only works from ipython 0.12 onwards.",
        name => 'passive.t',
       };
 
