@@ -93,11 +93,11 @@ sub main
 	or $ipython_version =~ /^0\.12/
 	or $ipython_version =~ /^0\.11/)
     {
-	system "ipython --pylab --banner --pdb --i --profile genesis3 --ipython-dir $ENV{HOME}/.genesis3/gipyshell/ipython_profile " . (join ' ', map { "'$_'" } @ARGV);;
+	system "ipython --pylab --pdb --i --profile genesis3 --ipython-dir $ENV{HOME}/.genesis3/gipyshell/ipython_profile " . (join ' ', map { "'$_'" } @ARGV);;
     }
     else
     {
-	system "ipython -pylab -banner -pdb -i -profile genesis3 -ipythondir $ENV{HOME}/.genesis3/gipyshell/ipython_profile " . (join ' ', map { "'$_'" } @ARGV);;
+	system "ipython -pylab -pdb -i -profile genesis3 -ipythondir $ENV{HOME}/.genesis3/gipyshell/ipython_profile " . (join ' ', map { "'$_'" } @ARGV);;
     }
 }
 

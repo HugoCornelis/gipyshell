@@ -1,3 +1,5 @@
 import_mod sspy heccer model_container
 execute g3 = sspy.SSPy(verbose=True)
 execute models = g3.CreateService(name="model", type="model_container", verbose=True)
+execute print "---"
+execute print "- Welcome to the gipyshell, an interactive python based shell for GENESIS-3, for both interactive and batch simulations."

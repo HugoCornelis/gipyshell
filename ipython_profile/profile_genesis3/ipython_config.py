@@ -53,7 +53,7 @@ c.InteractiveShellApp.ignore_old_config=True
 # c.TerminalIPythonApp.profile = u'default'
 
 # Set the log level by value or name.
-c.TerminalIPythonApp.log_level = 10
+c.TerminalIPythonApp.log_level = 0
 
 # lines of code to run at IPython startup.
 c.TerminalIPythonApp.exec_lines = [
@@ -62,6 +62,8 @@ c.TerminalIPythonApp.exec_lines = [
     'import model_container',
     'g3 = sspy.SSPy(verbose=True)',
     'models = g3.CreateService(name="model", type="model_container", verbose=True)',
+    'print "---"',
+    'print "- Welcome to the gipyshell, an interactive python based shell for GENESIS-3, for both interactive and batch simulations."',
     ]
 
 # Enable GUI event loop integration ('qt', 'wx', 'gtk', 'glut', 'pyglet').
