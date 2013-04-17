@@ -64,6 +64,8 @@ sub main
 {
     read_cmd_line();
 
+    # copy G-3 configuration files to the user's home directory because then we can ...
+
     system "mkdir --parents $ENV{HOME}/.genesis3/gipyshell/ipython_profile";
 
     if ($?)
@@ -73,7 +75,7 @@ sub main
 
 #     if (not -d "$ENV{HOME}/.genesis3/gipyshell/ipython_profile/profile_genesis3")
     {
-	system "cp -a /usr/local/neurospaces/gipyshell/ipython_profile/profile_genesis3/ $ENV{HOME}/.genesis3/gipyshell/ipython_profile";
+	system "cp -a /usr/local/neurospaces/gipyshell/ipython_profile/ipythonrc-genesis3 /usr/local/neurospaces/gipyshell/ipython_profile/profile_genesis3/ $ENV{HOME}/.genesis3/gipyshell/ipython_profile";
 
 	if ($?)
 	{
@@ -84,6 +86,8 @@ sub main
     $ENV{NEUROSPACES_NMC_MODELS} = "/usr/local/neurospaces/models/library";
 
     my $ipython_version = `ipython -V`;
+
+    # ... start ipython with configuration from the home directory, such that history is preserved across sessions
 
     if ($ipython_version =~ /^1/
 	or $ipython_version =~ /^0\.12/
