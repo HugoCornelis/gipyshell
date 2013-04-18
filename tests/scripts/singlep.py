@@ -15,7 +15,7 @@ i = g3.CreateInput('perfect clamp', 'perfectclamp', verbose=True)
 
 i.AddInput('/singlep/segments/soma', 'INJECT')
 
-i.SetCommandVoltage(1e-9)
+i.SetCommand(1e-9)
 
 ##########
 # user work-flow step 2: create experiment, (b) output

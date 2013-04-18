@@ -33,8 +33,8 @@ my $test
 ",
 						  },
 						  {
-						   description => "i.SetCommandVoltage(1e-9)",
-						   write => "i.SetCommandVoltage(1e-9)
+						   description => "i.SetCommand(1e-9)",
+						   write => "i.SetCommand(1e-9)
 ",
 						  },
 						  {
