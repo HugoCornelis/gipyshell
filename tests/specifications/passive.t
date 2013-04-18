@@ -32,7 +32,6 @@ my $test
 				     command_tests => [
 						       {
 							description => "Is startup successful ?",
-							disabled => "this test only works with ipython 0.12 onwards",
 							read => "Welcome to the gipyshell",
 							timeout => 10,
 						       },
