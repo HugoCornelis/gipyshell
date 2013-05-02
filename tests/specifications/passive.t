@@ -48,7 +48,7 @@ my $test
 						       },
 						       {
 							comment => "Note that when this test does not wait for two second, it may fail",
-							description => "Can we run the $model_name model ?",
+							description => "Can we find the output of the $model_name model ?",
 							disabled => ($model_name eq 'tensizesp' ? 'the tensizesp model needs improvements of the numerical_compare heuristic' : 0),
 							numerical_compare => 1,
 							read => {
