@@ -18,6 +18,7 @@ SUBDIRS = # src # perl python
 
 # fill in the scripts that should go with the distribution:
 dist_bin_SCRIPTS = \
+	bin/gipyplot \
 	bin/gipyshell \
 	bin/gipyshell-sync \
 	bin/gipyshell-version
